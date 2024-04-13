@@ -52,6 +52,11 @@ func structToMap(obj interface{}, tagName string) map[string]interface{} {
 			con := obj.(LTPParams)
 			values = reflect.ValueOf(&con).Elem()
 		}
+	case HistoricalParams:
+		{
+			con := obj.(HistoricalParams)
+			values = reflect.ValueOf(&con).Elem()
+		}
 	case ConvertPositionParams:
 		{
 			con := obj.(ConvertPositionParams)
