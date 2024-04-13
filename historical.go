@@ -16,7 +16,7 @@ type HistoricalResponse struct {
 
 func (c *Client) GetHistoricalData(historicalParams HistoricalParams) (HistoricalResponse, error) {
 	var data HistoricalResponse
-	params := structToMap(data, "json")
+	params := structToMap(historicalParams, "json")
 	err := c.doEnvelope(http.MethodPost, URILTP, params, nil, &data, true)
 	return data, err
 }
