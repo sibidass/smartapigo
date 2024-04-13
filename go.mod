@@ -1,4 +1,4 @@
-module github.com/ssivadas/smartapigo
+module github.com/sibidass/smartapigo
 
 go 1.14
 
