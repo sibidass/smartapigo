@@ -11,17 +11,17 @@ type MarketLiveResponseData struct {
 	Fetched []MarketLiveFetched `json:"fetched"`
 }
 type MarketLiveFetched struct {
-	TradingSymbol string `json:"tradingSymbol"`
-	SymbolToken   string `json:"symbolToken"`
-	Ltp           string `json:"ltp"`
-	TradeTime     string `json:"exchTradeTime"`
-	NetChange     string `json:"netChange"`
-	TradeVolume   string `json:"tradeVolume"`
-	LC            string `json:"lowerCircuit"`
-	UC            string `json:"upperCircuit"`
-	BuyQuan       string `json:"totBuyQuan"`
-	SellQuan      string `json:"totSellQuan"`
-	Depth         Depth  `json:"depth"`
+	TradingSymbol string  `json:"tradingSymbol"`
+	SymbolToken   string  `json:"symbolToken"`
+	Ltp           float64 `json:"ltp"`
+	TradeTime     string  `json:"exchTradeTime"`
+	NetChange     float64 `json:"netChange"`
+	TradeVolume   float64 `json:"tradeVolume"`
+	LC            float64 `json:"lowerCircuit"`
+	UC            float64 `json:"upperCircuit"`
+	BuyQuan       float64 `json:"totBuyQuan"`
+	SellQuan      float64 `json:"totSellQuan"`
+	Depth         Depth   `json:"depth"`
 }
 
 type Depth struct {
