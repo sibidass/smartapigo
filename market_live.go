@@ -3,8 +3,8 @@ package smartapigo
 import "net/http"
 
 type MarketLiveParams struct {
-	Mode           string   `json:"mode"`
-	ExchangeTokens []string `json:"exchangeTokens"`
+	Mode           string              `json:"mode"`
+	ExchangeTokens map[string][]string `json:"exchangeTokens"`
 }
 
 type MarketLiveResponseData struct {
