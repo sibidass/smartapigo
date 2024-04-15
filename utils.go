@@ -31,6 +31,7 @@ const (
 	URIRMS              string = "rest/secure/angelbroking/user/v1/getRMS"
 	URIConvertPosition  string = "rest/secure/angelbroking/order/v1/convertPosition"
 	URIHistorical       string = "rest/secure/angelbroking/historical/v1/getCandleData"
+	URIMarketLive       string = "rest/secure/angelbroking/market/v1/quote/"
 )
 
 func structToMap(obj interface{}, tagName string) map[string]interface{} {
@@ -60,6 +61,11 @@ func structToMap(obj interface{}, tagName string) map[string]interface{} {
 	case ConvertPositionParams:
 		{
 			con := obj.(ConvertPositionParams)
+			values = reflect.ValueOf(&con).Elem()
+		}
+	case MarketLiveParams:
+		{
+			con := obj.(MarketLiveParams)
 			values = reflect.ValueOf(&con).Elem()
 		}
 	}
