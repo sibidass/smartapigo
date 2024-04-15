@@ -22,6 +22,10 @@ type MarketLiveFetched struct {
 	BuyQuan       float64 `json:"totBuyQuan"`
 	SellQuan      float64 `json:"totSellQuan"`
 	Depth         Depth   `json:"depth"`
+	Open          float64 `json:"open"`
+	High          float64 `json:"high"`
+	Low           float64 `json:"low"`
+	Close         float64 `json:"close"`
 }
 
 type Depth struct {
